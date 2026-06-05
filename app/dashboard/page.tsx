@@ -110,7 +110,7 @@ export default function Dashboard() {
           {/* PROFILE IMAGE */}
           <div className="relative" ref={menuRef}>
             <img
-              src={user.photoURL || ""}
+              src={user.photoURL || "/default-avatar.png"}
               alt="Profile"
               onClick={() => setOpenMenu(!openMenu)}
               className="w-20 h-20 rounded-full border cursor-pointer hover:scale-105 transition"

@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-
+"use client";
 import { initializeApp } from "firebase/app";
 import { getFirestore }
 from "firebase/firestore";
@@ -23,6 +23,10 @@ const firebaseConfig = {
   appId:
     process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
+
+if (!firebaseConfig.apiKey) {
+  throw new Error("Missing Firebase ENV variables");
+}
 
 // Initialize Firebase
 
